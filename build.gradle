@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.devzone'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.vertx:vertx-web-client:3.9.1'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
+    // logging
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+    testCompile 'junit:junit:4.12'
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
